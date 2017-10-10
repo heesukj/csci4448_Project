@@ -1,6 +1,6 @@
 # CSCI 4448 Project 
 
-### Title : Daily Proverb
+## Title : Daily Proverb
 
 ### Description : 
 
