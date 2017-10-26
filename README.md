@@ -1,10 +1,11 @@
 # CSCI 4448 Project 
 
-## Title : Daily Proverb
+## Title : Stock Score
 
 ### Description : 
 
-A app built for delivering quotes based off of users selected search terms
+Stock Score provides investment information to users.  Users enter a stock ticker and a date range to generate a stock score which indicates if the user should buy, hold or sell a stock. Users can save a score as a favorite or share the score with other users. 
+
 
 ### Team Members:
 
