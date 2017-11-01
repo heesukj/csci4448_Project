@@ -17,7 +17,7 @@ Stock Score provides investment information to users.  Users enter a stock ticke
 
 Score = (RealTimeSentiments x 0.6) + (EMA x 0.4)
 
- #####Note:#####
-  * #####RealTimeSentiments:##### The feeling or tone of a market, or its crowd psychology, as revealed through the activity and price movement of the securities traded in that market. For example, rising prices would indicate a bullish market sentiment, while falling prices would indicate a bearish market sentiment => Do addition (+) for bullish and subtraction (-) for bearlish indicator in the computation
-  * #####EMA (Exponential Moving Average)##### = (daily closing stok price - EMA previous day) x (2 / Time Period + 1) + EMA previous day
+ ##### Note:#####
+   * RealTimeSentiments:The feeling or tone of a market, or its crowd psychology, as revealed through the activity and price movement of the securities traded in that market. For example, rising prices would indicate a bullish market sentiment, while falling prices would indicate a bearish market sentiment => Do addition (+) for bullish and subtraction (-) for bearlish indicator in the computation
+  * EMA (Exponential Moving Average) = (daily closing stok price - EMA previous day) x (2 / Time Period + 1) + EMA previous day
 
