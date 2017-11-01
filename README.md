@@ -15,5 +15,7 @@ Stock Score provides investment information to users.  Users enter a stock ticke
 
 ### Score Algorithm
 
-Score = [MACD x (0.25)] + [realTimeSentiments x (0.5)] +[EMA x (0.25)]
+Score = (realTimeSentiments x 0.6) +(EMA x 0.4)
+
+Note: addition (+) for bullish and subtraction (-) for bearlish indicator
 
