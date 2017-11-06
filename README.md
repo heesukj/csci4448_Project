@@ -24,6 +24,6 @@ The feeling or tone of a market, or its crowd psychology, as revealed through th
   
 ### Introduced APIs for Automating Data Pulls
  * <https://stockinvest.us>
- * <https://www.tradingview.com
+ * <https://www.tradingview.com>
  * <https://stocktwits.com>
 
