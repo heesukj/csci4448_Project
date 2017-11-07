@@ -27,3 +27,5 @@ The feeling or tone of a market, or its crowd psychology, as revealed through th
  * <https://www.tradingview.com>
  * <https://stocktwits.com>
 
+### Reference URL for Refactoring and Design Patterns
+ * <https://refactoring.guru>
