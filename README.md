@@ -13,6 +13,9 @@ Stock Score provides investment information to users.  Users enter a stock ticke
 - Heesuk Jang
 - David Zhuzhunashvili
 
+### Spring Boot Tutorial:
+https://www.lynda.com/Spring-Framework-tutorials/Welcome/550572/595793-4.html
+
 ### Score Algorithm
 
 Score = (RealTimeSentiments x 0.6) + (EMA x 0.4)
