@@ -1,0 +1,6 @@
+stockscore/target/
+stockscore/.settings/
+stockscore/.classpath
+stockscore/.project
+stockscore/.tern-project
+.DS_Store
