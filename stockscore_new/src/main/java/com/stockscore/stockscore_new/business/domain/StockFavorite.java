@@ -1,4 +1,4 @@
-package com.stockscore_new.business.domain;
+package com.stockscore.stockscore_new.business.domain;
 
 /**
  * Created by heesukjang on 11/28/17.

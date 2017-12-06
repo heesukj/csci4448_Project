@@ -1,6 +1,6 @@
 // [Bean = Entity Class] includes only attributes, Getters, and Setters (not other methods) <-> POJO (plain-old-java-object: includes attributes, getters, setters and OTHER methods)
 
-package com.stockscore_new.data.entity;
+package com.stockscore.stockscore_new.data.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
