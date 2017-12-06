@@ -80,38 +80,6 @@ public class StockPage {
         this.stock = stock;
     }
 
-    public void setFavorite(Favorite favorite) {
-        this.favorite = favorite;
-    }
-
-    public void setHistData(HistoricalPerf histData) {
-        this.histData = histData;
-    }
-
-    public void setAlert(Alert alert) {
-        this.alert = alert;
-    }
-
-    public void setShare(Share share) {
-        this.share = share;
-    }
-
-    public void setStockChart(StockChart stockChart) {
-        this.stockChart = stockChart;
-    }
-
-    public void setPeerChart(PeerChart peerChart) {
-        this.peerChart = peerChart;
-    }
-
-    public void setMarketChart(MarketChart marketChart) {
-        this.marketChart = marketChart;
-    }
-
-    public void setMrkSentiment(MarketSentiment mrkSentiment) {
-        this.mrkSentiment = mrkSentiment;
-    }
-
     public void setStockPrice(float stockPrice) {
         this.stockPrice = stockPrice;
     }
@@ -128,7 +96,4 @@ public class StockPage {
         this.stockDesc = stockDesc;
     }
 
-    public void displayAllFavorite() {
-        return favorite.getStock().getStockName();
-    }
 }
