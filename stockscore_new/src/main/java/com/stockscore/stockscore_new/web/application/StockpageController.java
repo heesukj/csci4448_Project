@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 
 @Controller
-@RequestMapping(value="/stockscore")   // url path
-public class StockScoreController {
+@RequestMapping(value="/stockpage")   // url path
+public class StockpageController {
 
     // --------- Get a StockScore ---------
     @RequestMapping(method= RequestMethod.GET)
     public String getStockScore() {
-        return "stockscore";    //That string is actually going to get translated by the Thymeleaf engine into the name of a template. In our resources directory
+        return "stockpage";    //That string is actually going to get translated by the Thymeleaf engine into the name of a template. In our resources directory
     }
 }

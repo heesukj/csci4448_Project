@@ -1,3 +1,4 @@
+/*
 package com.stockscore.stockscore_new.data.nonEntity;
 
 import com.stockscore.stockscore_new.data.entity.Stock;
@@ -104,3 +105,4 @@ public class StockPage {
     }
 
 }
+*/
