@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-
 @Controller
 @RequestMapping(value="/stockinfo")
 public class LandingPageController {
@@ -14,7 +13,9 @@ public class LandingPageController {
     @RequestMapping(method= RequestMethod.GET)
     public String getStockInfo(@RequestParam(value="stockTicker") String stockTicker, Model model) {
         model.addAttribute("stockTicker", stockTicker);
+
         return "stockinfo";
+
 
     }
 }
