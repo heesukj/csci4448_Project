@@ -1,4 +1,4 @@
-package com.stockscore_new.data.entity;
+package com.stockscore.stockscore_new.data.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

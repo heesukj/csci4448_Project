@@ -1,6 +1,6 @@
-package com.stockscore_new.data.repository;
+package com.stockscore.stockscore_new.data.repository;
 
-import com.stockscore_new.data.entity.Stock;
+import com.stockscore.stockscore_new.data.entity.Stock;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -11,5 +11,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface StockRepository extends CrudRepository<Stock, Integer> {
 
-    Boolean validTicker();
+//    Boolean validTicker();
 }
