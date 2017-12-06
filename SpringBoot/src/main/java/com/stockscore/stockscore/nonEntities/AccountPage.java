@@ -1,5 +1,5 @@
 package com.stockscore.stockscore.nonEntities;
-
+/*
 public class AccountPage {
     private User user;
 
@@ -13,7 +13,8 @@ public class AccountPage {
     }
 
     private User signup() {
-        return user
+        return user;
     }
 
 }
+*/

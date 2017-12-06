@@ -1,5 +1,5 @@
 package com.stockscore.stockscore.nonEntities;
-
+/*
 public class StockPage {
     private User user;
     private Stock stock;
@@ -97,3 +97,4 @@ public class StockPage {
     }
 
 }
+*/

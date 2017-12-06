@@ -1,5 +1,5 @@
 package com.stockscore.stockscore.nonEntities;
-
+/*
 public class StockChart extends Chart {
 
     public StockChart(Stock stock, HistoricalPerf historicalPerf) {
@@ -12,3 +12,4 @@ public class StockChart extends Chart {
         return this;
     }
 }
+*/
