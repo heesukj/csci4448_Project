@@ -5,17 +5,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * Created by heesukjang on 12/4/17.
- * better to build a Controller per URL path (no right or wrong) => include about 5-6 methods: Get, Put, Post, Delete
+ * Created by heesukjang on 12/6/17.
  */
 
+
+
 @Controller
-@RequestMapping(value="/stockscore")   // url path
+@RequestMapping(value="stockscore")
 public class StockScoreController {
 
-    // --------- Get a StockScore ---------
+    //    @RequestMapping(method= RequestMethod.GET)
+//    public String getFavorite(@RequestParam(value="stockTicker", required=false)String ticker, Model model) {
+//        List<StockFavorite> stockFavoriateList = this.favoriteService.geFavoriteForStockTicker(ticker);
+//        model.addAttribute("stockFavorite", stockFavoriateList);
+//        return "favorite";
+//    }
+
     @RequestMapping(method= RequestMethod.GET)
     public String getStockScore() {
-        return "stockscore";    //That string is actually going to get translated by the Thymeleaf engine into the name of a template. In our resources directory
+        return "stockscore";
     }
+
 }

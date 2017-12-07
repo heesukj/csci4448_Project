@@ -2,10 +2,8 @@
 
 package com.stockscore.stockscore_new.data.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 /**
  * Created by heesukjang on 11/27/17.
@@ -20,6 +18,9 @@ public class User {
     private String lastName;
     private String email;
     private String password;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Favorite> favorites;
 
     // default constructor will be generated
 
@@ -54,7 +55,8 @@ public class User {
     public void setPassword(String password) {
             this.password = password;
         }
-
+    public Set<Favorite> getFavorites() { return favorites; }
+    public void setFavorites(Set<Favorite> favorites) { this.favorites = favorites; }
 }
 
 /* create table User (

@@ -16,7 +16,7 @@ import org.springframework.stereotype.Repository;
 public interface UserRepository extends CrudRepository<User, Integer>{
 
 //    User getUserById(Integer id);
-//
+
 //    User getUserByEmail(String email);
 //
 //    User createUser(User user);

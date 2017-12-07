@@ -7,13 +7,8 @@ package com.stockscore.stockscore_new.web.application;
 
 import com.stockscore.stockscore_new.data.entity.User;
 import com.stockscore.stockscore_new.data.repository.UserRepository;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -25,20 +20,23 @@ import org.springframework.web.bind.annotation.RequestMethod;
 // Rest service to Database
 
 @Controller
-@RequestMapping(value="user")   // url path
+@RequestMapping(value = "/user")   // url path
 public class UserController {
 
     // Rest endpoints that talk to Service
     // tell Spring to find a component of UserService and use that
     // one as an instance (not having constructor to instantiate)
 
-    public static final Logger logger = LoggerFactory.getLogger(UserController.class);
-
+//        public static final Logger logger = LoggerFactory.getLogger(UserController.class);
+//
     @Autowired
     private UserRepository userRepository;
 
-    @RequestMapping(method=RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     public String getUser() {
+        User user = (User) userRepository.findOne(5);
+        System.out.println("user name: " + user.getFirstName());
+        System.out.println("user favorires: " + user.getFavorites().iterator().next().getStock().getStockName());
         return "user";    //That string is actually going to get translated by the Thymeleaf engine into the name of a template. In our resources directory
     }
     // Get request on Rest with endpoint /users
@@ -56,21 +54,21 @@ public class UserController {
 //        return new ResponseEntity<Iterable<User>>(allUsers, HttpStatus.OK);
 //    }
 
-// --------- Retrieve SINGLE User => NOT_FOUND(404, "Not Found") ---------
-    @RequestMapping(value="/user/{id}", method = RequestMethod.GET)
-    public ResponseEntity<User> getUser(@PathVariable("id") Integer id) {
-        logger.info("Fetching User with id {}", id);
-
-        User user = userRepository.findOne(id);
-
-        if (user == null) {
-            logger.error("User with id {} not found.", id);
-//            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-            return new ResponseEntity<User>(user, HttpStatus.NOT_FOUND);
-        }
-//        return ResponseEntity.ok(user);
-        return new ResponseEntity<User>(user, HttpStatus.OK);
-    }
+    // --------- Retrieve SINGLE User => NOT_FOUND(404, "Not Found") ---------
+//        @RequestMapping(value="/user/{id}", method = RequestMethod.GET)
+//        public ResponseEntity<User> getUser(@PathVariable("id") Integer id) {
+//            logger.info("Fetching User with id {}", id);
+//
+//            User user = userRepository.findOne(id);
+//
+//            if (user == null) {
+//                logger.error("User with id {} not found.", id);
+////            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+//                return new ResponseEntity<User>(user, HttpStatus.NOT_FOUND);
+//            }
+////        return ResponseEntity.ok(user);
+//            return new ResponseEntity<User>(user, HttpStatus.OK);
+//        }
 //
 //// --------- Login (username = email, password, RequestBody(exist only in POST) =  records of a user in JSON format) ---------
 //    @RequestMapping(value="/login", method = RequestMethod.POST)
@@ -147,3 +145,4 @@ public class UserController {
 //    }
 
 }
+

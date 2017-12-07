@@ -2,6 +2,7 @@ package com.stockscore.stockscore_new.business.domain;
 
 /**
  * Created by heesukjang on 11/28/17.
+ * this Domain class StockFavorite is a combination of two Entities: Stock.java and Favorite.java
  */
 public class StockFavorite {
     private Integer userId;
