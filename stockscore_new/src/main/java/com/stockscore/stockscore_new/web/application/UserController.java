@@ -34,9 +34,11 @@ public class UserController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String getUser() {
+        // pull the user that has id=5 (
         User user = (User) userRepository.findOne(5);
         System.out.println("user name: " + user.getFirstName());
         System.out.println("user favorires: " + user.getFavorites().iterator().next().getStock().getStockName());
+        System.out.println("user shares: " + user.getShares().iterator().next().getStock().getStockTicker());
         return "user";    //That string is actually going to get translated by the Thymeleaf engine into the name of a template. In our resources directory
     }
     // Get request on Rest with endpoint /users

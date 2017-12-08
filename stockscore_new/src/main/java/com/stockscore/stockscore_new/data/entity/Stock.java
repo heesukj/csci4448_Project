@@ -1,9 +1,7 @@
 package com.stockscore.stockscore_new.data.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 /**
  * Created by heesukjang on 11/28/17.
@@ -19,7 +17,30 @@ public class Stock {
     private String stockName;
     private String stockTicker;
     private String marketIndex;
+
+    public Set<Favorite> getFavorites() {
+        return favorites;
+    }
+
+    public void setFavorites(Set<Favorite> favorites) {
+        this.favorites = favorites;
+    }
+
+    public Set<Share> getShares() {
+        return shares;
+    }
+
+    public void setShares(Set<Share> shares) {
+        this.shares = shares;
+    }
+
     private String stockIndus;
+    @OneToMany(mappedBy = "stock", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Favorite> favorites;
+
+
+    @OneToMany(mappedBy = "stock", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Share> shares;
 
     // default constructor will be generated
 

@@ -22,6 +22,10 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Favorite> favorites;
 
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Share> shares;
+
     // default constructor will be generated
 
     // getters and setters: Code -> Generate... -> getters and setters
@@ -57,6 +61,14 @@ public class User {
         }
     public Set<Favorite> getFavorites() { return favorites; }
     public void setFavorites(Set<Favorite> favorites) { this.favorites = favorites; }
+    public Set<Share> getShares() {
+        return shares;
+    }
+
+    public void setShares(Set<Share> shares) {
+        this.shares = shares;
+    }
+
 }
 
 /* create table User (

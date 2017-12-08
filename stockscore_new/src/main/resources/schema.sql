@@ -11,7 +11,7 @@ create table User (
 
 create table Stock (
     id INT NOT NULL auto_increment,
-    stock_name VARCHAR(20) NOT NULL,
+    stock_name VARCHAR(30) NOT NULL,
     stock_ticker VARCHAR(20) NOT NULL,
     market_index VARCHAR(10) default NULL,
     stock_indus  VARCHAR(60) default NULL,
