@@ -1,5 +1,5 @@
 package com.stockscore.stockscore.nonEntities;
-
+/*
 public class ChartFactory {
 
     public static Chart createChart(String type, Stock stock, HistoricalPerf historicalPerf) {
@@ -12,3 +12,4 @@ public class ChartFactory {
         return null;
     }
 }
+*/

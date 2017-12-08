@@ -1,5 +1,5 @@
 package com.stockscore.stockscore.nonEntities;
-
+/*
 public  abstract class Chart {
     protected Stock stock;
     protected HistoricalPerf historicalPerf;
@@ -14,3 +14,4 @@ public  abstract class Chart {
         return historicalPerf;
     }
 }
+*/
