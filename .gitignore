@@ -3,4 +3,8 @@ stockscore/.settings/
 stockscore/.classpath
 stockscore/.project
 stockscore/.tern-project
+stockscore/stockscore.iml
+stockscore/stockscore.ipr
+stockscore/stockscore.iws
+stockscore/.idea/
 .DS_Store
