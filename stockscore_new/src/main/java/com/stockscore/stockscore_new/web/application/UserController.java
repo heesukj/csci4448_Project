@@ -9,8 +9,10 @@ import com.stockscore.stockscore_new.data.entity.User;
 import com.stockscore.stockscore_new.data.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Created by heesukjang on 11/27/17.
@@ -33,12 +35,17 @@ public class UserController {
     private UserRepository userRepository;
 
     @RequestMapping(method = RequestMethod.GET)
-    public String getUser() {
+    public String getUser(@RequestParam(value="user", required=true) Integer userId, Model model) {
         // pull the user that has id=5 (
-        User user = (User) userRepository.findOne(5);
+        System.out.println("userId: " + userId);
+        User user = (User) userRepository.findOne(userId);
         System.out.println("user name: " + user.getFirstName());
         System.out.println("user favorires: " + user.getFavorites().iterator().next().getStock().getStockName());
         System.out.println("user shares: " + user.getShares().iterator().next().getStock().getStockTicker());
+
+        model.addAttribute("favorites", user.getFavorites());
+        model.addAttribute("shares", user.getShares());
+
         return "user";    //That string is actually going to get translated by the Thymeleaf engine into the name of a template. In our resources directory
     }
     // Get request on Rest with endpoint /users
