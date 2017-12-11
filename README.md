@@ -32,3 +32,6 @@ The feeling or tone of a market, or its crowd psychology, as revealed through th
 
 ### Reference URL for Refactoring and Design Patterns
  * <https://refactoring.guru>
+
+### Video Demo
+ * <https://drive.google.com/file/d/1XTlqYWoP2d7Il5cQ-YZE5HhVqJAsMfz9/view?userstoinvite=jang@colorado.edu&ts=5a2ec57c&actionButton=1>
