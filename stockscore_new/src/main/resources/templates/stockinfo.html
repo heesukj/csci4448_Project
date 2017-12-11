@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Test Header -->
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="A layout example that shows off a responsive product landing page."/>
+    <title>Stock Score</title>
+
+    <script type="text/javascript" src="require.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous"/>
+
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css"/>
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css"/>
+    <!--<![endif]-->
+
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"/>
+
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="../static/css/landingPage.css"/>
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="../static/css/landPage_IE_OLD.css"/>
+    <!--<![endif]-->
+
+    <link href="../static/css/landingPage.css" th:href="@{/css/landingPage.css}" rel="stylesheet" />
+
+    <link href="../static/css/landingPage_IE_OLD.css" th:href="@{/css/landingPage_IE_OLD.css}" rel="stylesheet" />
+
+    <!-- Test Header End -->
+
+</head>
+<body>
+
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <a class="pure-menu-heading" href="">Stock Score</a>
+
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Search</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Sign Up</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="content-wrapper" style="top:10%">
+    <div class="content">
+        <h2 th:inline = 'text' class="content-head is-center">Score: [[${bullishSentiment}]]</h2>
+    </div>
+
+    <!--
+    <script th:inline="javascript">
+
+        //var express = require('express');
+        //var fs      = require('fs');
+        //var request = require('request');
+        //var cheerio = require('cheerio');
+        //var app     = express();
+        /*
+        url = 'https://stocktwits.com/symbol/VRX';
+
+        request(url, function(error, response, html){
+            if(!error){
+                var $ = cheerio.load(html);
+
+                var rating;
+
+                $('.bullish').filter(function(){
+                    var data = $(this);
+                    rating = data.text().trim();
+
+                    console.log(rating);
+
+                })
+            }
+
+        })
+        */
+        document.write(5 + 6);
+    </script>
+    -->
+
+    <!--
+    <script>
+        document.write(5 + 6);
+    </script>
+    -->
+
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        var stock = "NASDAQ:" + [[${stockTicker}]];
+        /*]]>*/
+
+        new TradingView.widget({
+            "width": 980,
+            "height": 610,
+            "symbol": stock,
+            "interval": "D",
+            "timezone": "Etc/UTC",
+            "theme": "Light",
+            "style": "1",
+            "locale": "en",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "allow_symbol_change": false,
+            "hideideas": true
+        });
+    </script>
+
+
+</div>
+
+</body>
+
+</html>
