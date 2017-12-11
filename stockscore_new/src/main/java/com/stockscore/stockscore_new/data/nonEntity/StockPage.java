@@ -1,10 +1,8 @@
-/*
 package com.stockscore.stockscore_new.data.nonEntity;
 
 import com.stockscore.stockscore_new.data.entity.Stock;
 import com.stockscore.stockscore_new.data.entity.User;
 import com.stockscore.stockscore_new.data.entity.Favorite;
-import com.stockscore.stockscore_new.data.entity.Alert;
 import com.stockscore.stockscore_new.data.entity.Share;
 
 
@@ -105,4 +103,3 @@ public class StockPage {
     }
 
 }
-*/
