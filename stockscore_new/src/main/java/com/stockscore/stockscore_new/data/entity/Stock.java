@@ -1,7 +1,9 @@
 package com.stockscore.stockscore_new.data.entity;
 
-import javax.persistence.*;
-import java.util.Set;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  * Created by heesukjang on 11/28/17.
@@ -17,34 +19,40 @@ public class Stock {
     private String stockName;
     private String stockTicker;
     private String marketIndex;
-
-    public Set<Favorite> getFavorites() {
-        return favorites;
-    }
-
-    public void setFavorites(Set<Favorite> favorites) {
-        this.favorites = favorites;
-    }
-
-    public Set<Share> getShares() {
-        return shares;
-    }
-
-    public void setShares(Set<Share> shares) {
-        this.shares = shares;
-    }
-
     private String stockIndus;
-    @OneToMany(mappedBy = "stock", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<Favorite> favorites;
 
-
-    @OneToMany(mappedBy = "stock", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<Share> shares;
+    // ONE stock can have MANY favorites
+    // "mappedBy = "stock" tells us this relation will be managed by Stock class.
+    // for example, if we insert a favorite, then two SQL will be injected if cascadetype=all/save.
+    // 1st SQL will inject details in Stock table and 2nd SQL will inject favorite details in favorite table with
+    // "stock_id" column of Favorite column pointing to Stock inserted.
+//    @OneToMany(mappedBy = "stock", cascade = CascadeType.ALL, orphanRemoval = true)
+//    private Set<Favorite> favorites;
+//
+//
+//    @OneToMany(mappedBy = "stock", cascade = CascadeType.ALL, orphanRemoval = true)
+//    private Set<Share> shares;
 
     // default constructor will be generated
 
     // getters and setters: Code -> Generate... -> getters and setters
+
+//    public Set<Favorite> getFavorites() {
+//        return favorites;
+//    }
+//
+//    public void setFavorites(Set<Favorite> favorites) {
+//        this.favorites = favorites;
+//    }
+//
+//    public Set<Share> getShares() {
+//        return shares;
+//    }
+//
+//    public void setShares(Set<Share> shares) {
+//        this.shares = shares;
+//    }
+
     public Integer getId() {
         return id;
     }
