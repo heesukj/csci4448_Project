@@ -17,7 +17,6 @@ public class LandingPageController {
     public String getStockInfo(@RequestParam(value="stockTicker") String stockTicker, Model model) {
         model.addAttribute("stockTicker", stockTicker);
 
-        /*-- Doug's Retcon'd code --*/
         Document doc;
         String rating = "WrongAns";
         try {
@@ -28,7 +27,7 @@ public class LandingPageController {
         } catch (IOException e){
             e.printStackTrace();
         }
-        /* ------------------------- */
+
 
         return "stockinfo";
 
