@@ -12,6 +12,8 @@ import org.springframework.stereotype.Repository;
  * Created by heesukjang on 11/27/17.
  */
 
+// we get all the methods declared in CrudRepository Interface in this sub-interface UserRepository
+
 @Repository
 public interface UserRepository extends CrudRepository<User, Integer>{
 

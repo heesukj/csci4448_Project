@@ -24,6 +24,8 @@ public class StockpageController {
 //        return "stockpage";    //That string is actually going to get translated by the Thymeleaf engine into the name of a template. In our resources directory
 //    }
 
+    // when using @Autowired: don't need to call a constructor to create an instance
+    // we get all the built-in CrudRepository methods (like .findOne(id)); thru the instance of userRepository here
     @Autowired
     private UserRepository userRepository;
 
@@ -33,9 +35,12 @@ public class StockpageController {
         System.out.println("userId: " + userId);
         User user = (User) userRepository.findOne(userId);
         System.out.println("user name: " + user.getFirstName());
+        // when allows to go thru all the elements, call iterator() if the next elem exists and
+        // for every favoriate, get stockname from the favorite stock
         System.out.println("user favorires: " + user.getFavorites().iterator().next().getStock().getStockName());
         System.out.println("user shares: " + user.getShares().iterator().next().getStock().getStockTicker());
 
+        // make available in html
         model.addAttribute("user", user);
         model.addAttribute("favorites", user.getFavorites());
         model.addAttribute("shares", user.getShares());

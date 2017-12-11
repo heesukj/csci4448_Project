@@ -12,24 +12,25 @@ INSERT INTO STOCK (stock_name, stock_ticker, market_index, stock_indus) VALUES (
 INSERT INTO STOCK (stock_name, stock_ticker, market_index, stock_indus) VALUES ('COSTCO WHSL CORP NEW COM', 'COST', 'NASDAQ', 'Consumer Cyclicals : Diversified Retail');
 
 INSERT INTO SHARE (user_id, stock_id, email_to_share_with) VALUES ((SELECT id FROM USER WHERE last_name = 'Smith'), (SELECT id FROM STOCK WHERE stock_ticker = 'XOM'), 'xaizing@gmail.com');
+INSERT INTO SHARE (user_id, stock_id, email_to_share_with) VALUES ((SELECT id FROM USER WHERE last_name = 'Rachael'), (SELECT id FROM STOCK WHERE stock_ticker = 'COST'), 'beesweet@gmail.com');
 INSERT INTO SHARE (user_id, stock_id, email_to_share_with) VALUES ((SELECT id FROM USER WHERE last_name = 'Zing'), (SELECT id FROM STOCK WHERE stock_ticker = 'M'), 'bobsmith@gmail.com');
 INSERT INTO SHARE (user_id, stock_id, email_to_share_with) VALUES ((SELECT id FROM USER WHERE last_name = 'Kim'), (SELECT id FROM STOCK WHERE stock_ticker = 'AAPL'), 'beesweet@gmail.com');
 INSERT INTO SHARE (user_id, stock_id, email_to_share_with) VALUES ((SELECT id FROM USER WHERE last_name = 'Sweet'), (SELECT id FROM STOCK WHERE stock_ticker = 'NFLX'), 'sungkim@gmail.com');
-INSERT INTO SHARE (user_id, stock_id, email_to_share_with) VALUES ((SELECT id FROM USER WHERE last_name = 'Rachael'), (SELECT id FROM STOCK WHERE stock_ticker = 'COST'), 'beesweet@gmail.com');
 INSERT INTO SHARE (user_id, stock_id, email_to_share_with) VALUES ((SELECT id FROM USER WHERE last_name = 'Smith'), (SELECT id FROM STOCK WHERE stock_ticker = 'AAPL'), 'beesweet@gmail.com');
 INSERT INTO SHARE (user_id, stock_id, email_to_share_with) VALUES ((SELECT id FROM USER WHERE last_name = 'Kim'), (SELECT id FROM STOCK WHERE stock_ticker = 'NFLX'), 'xaizing@gmail.com');
 INSERT INTO SHARE (user_id, stock_id, email_to_share_with) VALUES ((SELECT id FROM USER WHERE last_name = 'Kim'), (SELECT id FROM STOCK WHERE stock_ticker = 'COST'), 'bobsmith@gmail.com');
 
 
 INSERT INTO FAVORITE (user_id, stock_id) VALUES ((SELECT id FROM USER WHERE last_name = 'Zing'), (SELECT id FROM STOCK WHERE stock_ticker = 'AAPL'));
+INSERT INTO FAVORITE (user_id, stock_id) VALUES ((SELECT id FROM USER WHERE last_name = 'Rachael'), (SELECT id FROM STOCK WHERE stock_ticker = 'AAPL'));
+INSERT INTO FAVORITE (user_id, stock_id) VALUES ((SELECT id FROM USER WHERE last_name = 'Rachael'), (SELECT id FROM STOCK WHERE stock_ticker = 'M'));
+INSERT INTO FAVORITE (user_id, stock_id) VALUES ((SELECT id FROM USER WHERE last_name = 'Rachael'), (SELECT id FROM STOCK WHERE stock_ticker = 'XOM'));
 INSERT INTO FAVORITE (user_id, stock_id) VALUES ((SELECT id FROM USER WHERE last_name = 'Kim'), (SELECT id FROM STOCK WHERE stock_ticker = 'M'));
 INSERT INTO FAVORITE (user_id, stock_id) VALUES ((SELECT id FROM USER WHERE last_name = 'Smith'), (SELECT id FROM STOCK WHERE stock_ticker = 'NFLX'));
 INSERT INTO FAVORITE (user_id, stock_id) VALUES ((SELECT id FROM USER WHERE last_name = 'Smith'), (SELECT id FROM STOCK WHERE stock_ticker = 'V'));
 INSERT INTO FAVORITE (user_id, stock_id) VALUES ((SELECT id FROM USER WHERE last_name = 'Smith'), (SELECT id FROM STOCK WHERE stock_ticker = 'XOM'));
-INSERT INTO FAVORITE (user_id, stock_id) VALUES ((SELECT id FROM USER WHERE last_name = 'Rachael'), (SELECT id FROM STOCK WHERE stock_ticker = 'AAPL'));
-INSERT INTO FAVORITE (user_id, stock_id) VALUES ((SELECT id FROM USER WHERE last_name = 'Rachael'), (SELECT id FROM STOCK WHERE stock_ticker = 'M'));
 INSERT INTO FAVORITE (user_id, stock_id) VALUES ((SELECT id FROM USER WHERE last_name = 'Smith'), (SELECT id FROM STOCK WHERE stock_ticker = 'AAPL'));
 INSERT INTO FAVORITE (user_id, stock_id) VALUES ((SELECT id FROM USER WHERE last_name = 'Sweet'), (SELECT id FROM STOCK WHERE stock_ticker = 'V'));
 INSERT INTO FAVORITE (user_id, stock_id) VALUES ((SELECT id FROM USER WHERE last_name = 'Kim'), (SELECT id FROM STOCK WHERE stock_ticker = 'XOM'));
 INSERT INTO FAVORITE (user_id, stock_id) VALUES ((SELECT id FROM USER WHERE last_name = 'Sweet'), (SELECT id FROM STOCK WHERE stock_ticker = 'V'));
-INSERT INTO FAVORITE (user_id, stock_id) VALUES ((SELECT id FROM USER WHERE last_name = 'Rachael'), (SELECT id FROM STOCK WHERE stock_ticker = 'XOM'));
+

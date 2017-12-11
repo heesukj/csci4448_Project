@@ -7,6 +7,9 @@ import java.util.Set;
 
 /**
  * Created by heesukjang on 11/27/17.
+ * Model = entities like User, Stock, Share, and Favorite
+ * View = StockPage.html
+ * Controller = StockpageController
  */
 @Entity
 public class User {
