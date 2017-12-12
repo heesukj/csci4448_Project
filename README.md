@@ -16,7 +16,7 @@ Stock Score provides investment information to users.  Users enter a stock ticke
 https://www.lynda.com/Spring-Framework-tutorials/Welcome/550572/595793-4.html
 
  ##### Note:
-  * Market Sentiments:*
+  * Market Sentiments:
 The feeling or tone of a market, or its crowd psychology, as revealed through the activity and price movement of the securities traded in that market. For example, rising prices would indicate a bullish market sentiment, while falling prices would indicate a bearish market sentiment => Do addition (+) for bullish and subtraction (-) for bearlish indicator in the computation
   
 ### Introduced APIs for Automating Data Pulls
