@@ -6,6 +6,10 @@
 
 Stock Score provides investment information to users.  Users enter a stock ticker and a date range to generate a stock score which indicates if the user should buy, hold or sell a stock. Users can save a score as a favorite or share the score with other users. 
 
+### How to run:
+
+Open the stockscore_new directory using your IDE and all you need to do is make sure to import the jar "/stockscore_new/lib/jsoup-1.11.2.jar". Once this is imported into the project, you can run the program by running "StockscoreNewApplication". Once it is running, visit "http://localhost:8080/" and enter a stock ticker into the search bar and hit Submit. 
+
 ### Team Members:
 
 - Douglas Allen
