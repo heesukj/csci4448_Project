@@ -8,7 +8,9 @@ Stock Score provides investment information to users.  Users enter a stock ticke
 
 ### How to run:
 
-Open the stockscore_new directory using your IDE and all you need to do is make sure to import the jar "/stockscore_new/lib/jsoup-1.11.2.jar". Once this is imported into the project, you can run the program by running "StockscoreNewApplication". Once it is running, visit "http://localhost:8080/" and enter a stock ticker into the search bar and hit Submit. 
+- Open the stockscore_new directory using your IDE and all you need to do is make sure to import the jar "/stockscore_new/lib/jsoup-1.11.2.jar". 
+- Once this is imported into the project, you can run the program by running "StockscoreNewApplication". 
+- Once it is running, visit "http://localhost:8080/" and enter a stock ticker into the search bar and hit Submit. 
 
 ### Team Members:
 
